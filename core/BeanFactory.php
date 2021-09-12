@@ -61,7 +61,7 @@ class BeanFactory {
         foreach ($files as $file) {
             if (is_dir($file)) {
                 $ret = array_merge($ret, self::getAllBeanFiles($file));
-            } else if (pathinfo($file)["extension"] == "php") {
+            } else if (isset(pathinfo($file)["extension"]) && pathinfo($file)["extension"] == "php") {
                 $ret[] = $file;
             }
         }

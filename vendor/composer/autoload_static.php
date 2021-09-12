@@ -16,6 +16,7 @@ class ComposerStaticInit3ac2d8310598cc9c49b38e069c09f21c
         'P' => 
         array (
             'Psr\\Container\\' => 14,
+            'Psr\\Cache\\' => 10,
             'PhpDocReader\\' => 13,
         ),
         'O' => 
@@ -25,6 +26,14 @@ class ComposerStaticInit3ac2d8310598cc9c49b38e069c09f21c
         'I' => 
         array (
             'Invoker\\' => 8,
+        ),
+        'G' => 
+        array (
+            'Grpc\\' => 5,
+            'Google\\Protobuf\\' => 16,
+            'Go\\' => 3,
+            'GPBMetadata\\Google\\Protobuf\\' => 28,
+            'GPBMetadata\\' => 12,
         ),
         'F' => 
         array (
@@ -51,6 +60,10 @@ class ComposerStaticInit3ac2d8310598cc9c49b38e069c09f21c
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Psr\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
         'PhpDocReader\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-di/phpdoc-reader/src/PhpDocReader',
@@ -62,6 +75,26 @@ class ComposerStaticInit3ac2d8310598cc9c49b38e069c09f21c
         'Invoker\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-di/invoker/src',
+        ),
+        'Grpc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/grpc/grpc/src/lib',
+        ),
+        'Google\\Protobuf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/protobuf/src/Google/Protobuf',
+        ),
+        'Go\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Go',
+        ),
+        'GPBMetadata\\Google\\Protobuf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf',
+        ),
+        'GPBMetadata\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/GPBMetadata',
         ),
         'FastRoute\\' => 
         array (

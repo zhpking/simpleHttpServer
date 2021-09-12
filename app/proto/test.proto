@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package go.micro.srv.test;
+
+service Test {
+	rpc GetUserInfo(UserRequest) returns (UserResponse) {}
+}
+
+message UserRequest {
+    int64 id = 1;
+}
+
+message UserResponse {
+    int64 code = 1;
+	string msg = 2;
+	User userInfo = 3;
+
+}
+
+message User {
+    int64 id = 1;
+    string name = 2;
+}
