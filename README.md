@@ -14,7 +14,7 @@ php boot.php start
 ```
 
 ## 路由
-```
+```php
 /**
  * @RequestMapping(value="/test",method={})
  */
@@ -37,7 +37,7 @@ protoc --php_out=/项目路径/ --grpc_out=/项目路径/ --plugin=protoc-gen-gr
 ```
 
 ### 调用
-```
+```php
 /**
  * @RequestMapping(value="/test/grpcTest",method={})
  */
