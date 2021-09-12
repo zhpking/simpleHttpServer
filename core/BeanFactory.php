@@ -54,6 +54,21 @@ class BeanFactory {
         return self::$container->get($name);
     }
 
+    static private function getAllBeanFiles($dir) {
+        // ./app
+        $ret = [];
+        $files = glob($dir . "/*");
+        foreach ($files as $file) {
+            if (is_dir($file)) {
+                $ret = array_merge($ret, self::getAllBeanFiles($file));
+            } else if (pathinfo($file)["extension"] == "php") {
+                $ret[] = $file;
+            }
+        }
+
+        return $ret;
+    }
+
     static public function ScanBeans($scanDir, $scanRootNamespace) {
         // 获取注解处理方法
         // $annoHandlers = require_once (ROOT_PATH . "/core/annotations/AnnotationHandlers.php");
@@ -63,7 +78,16 @@ class BeanFactory {
         // $scanDir = self::getEnv("scan_dir", ROOT_PATH . "/app");
         // 扫描的namespace
         // $scanRootNamespace = self::getEnv("scan_root_namespace", "App\\");
+
+        /*
         $files=glob($scanDir . "/*.php");
+        foreach ($files as $file) {
+            require_once $file;
+        }
+        */
+
+        // 多级目录扫描
+        $files = self::getAllBeanFiles($scanDir);
         foreach ($files as $file) {
             require_once $file;
         }

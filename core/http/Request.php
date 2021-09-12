@@ -85,7 +85,7 @@ class Request {
      */
     public function getQueryParams()
     {
-        return $this->queryParams;
+        return $this->queryParams ? $this->queryParams : array();
     }
 
     /**
@@ -101,7 +101,7 @@ class Request {
      */
     public function getPostParams()
     {
-        return $this->postParams;
+        return $this->postParams ? $this->postParams : array();
     }
 
     /**
